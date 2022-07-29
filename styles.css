@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
+:root {
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
 * {
     font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -11,8 +15,9 @@ body {
     background-color: #e5eaf5;
     display: grid;
     grid-template-columns: 0.7fr 2fr 0.7fr;
-    grid-template-rows: 2fr 8fr;
 }
+
+/*SIDEBAR*/
 
 .sidebar {
     grid-column: 1 / 2;
@@ -54,9 +59,11 @@ body {
     width: 25px;
 }
 
+/*HEADER*/
+
 .header {
+    overflow: hidden;
     grid-column: 2 / 4;
-    grid-row: 1 / 2;
     background-color: #101357;
     color: white;
     padding: 10px 30px 10px 30px;
@@ -90,7 +97,7 @@ body {
 }
 
 #user {
-    font-size: calc(1.2rem + 0.4vw);
+    font-size: calc(1rem + 0.7vw);
 }
 
 .search-bar {
@@ -155,4 +162,61 @@ input#search-field:hover, .search:focus {
     border-radius: 18px;
     font-size: calc(0.6rem + 0.4vw);
     font-weight: 600; 
+}
+
+/*Main Content*/
+
+.card-container {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px 20px 20px;
+}
+
+#projects {
+    display: flex;
+    align-items: center;
+    grid-column: 1 / 3;
+    height: 50px;
+    padding: 10px 20px 10px 20px;
+    margin: 0;
+    font-size: calc(1.2rem + 0.4vw);
+    font-weight: 600; 
+    color: #B2C248;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: 1fr 4fr 1.5fr;
+    background-color: white;
+    height: 200px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    border-left: 10px solid #B2C248;
+    padding: 20px;
+}
+
+.card img {
+    width: 25px;
+}
+
+.action-block {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.card p {
+    display: flex;
+    align-items: flex-start;
+    font-size: calc(0.7rem + 0.4vw);
+    color: #b6bac3;
+    font-weight: 600;
+    margin: 0;
+}
+
+.card h3 {
+    margin: 0;
+    color: #B2C248;
 }
