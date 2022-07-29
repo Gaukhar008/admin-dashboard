@@ -5,10 +5,13 @@
 }
 
 body {
+    width: 100vw;
+    height: auto;
     margin: 0;
+    background-color: #e5eaf5;
     display: grid;
     grid-template-columns: 0.7fr 2fr 0.7fr;
-    grid-template-rows: 1fr 1fr 8fr;
+    grid-template-rows: 2fr 8fr;
 }
 
 .sidebar {
@@ -35,7 +38,7 @@ body {
 
 .links {
     list-style-type: none;
-    font-size: calc(0.7rem + 0.4vw);;
+    font-size: calc(0.7rem + 0.4vw);
     font-weight: 600; 
 }
 
@@ -49,4 +52,107 @@ body {
 
 .links img {
     width: 25px;
+}
+
+.header {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+    background-color: #101357;
+    color: white;
+    padding: 10px 30px 10px 30px;
+    font-size: calc(0.7rem + 0.4vw);
+    font-weight: 600; 
+}
+
+.header-start img[alt*='icon'] {
+    width: 25px;
+}
+
+.header-start img[alt*='photo'] {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.header-start {
+    display: grid;
+    grid-template-columns: 1.8fr 1.2fr;
+    grid-auto-flow: column;
+    gap: 30px;
+}
+
+.header-end {
+    grid-template-columns: 2 / 3;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#user {
+    font-size: calc(1.2rem + 0.4vw);
+}
+
+.search-bar {
+    grid-column: 1 / 2;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+input#search-field {
+    border: 1px solid white;
+    border-radius: 20px;
+    height: 25px;
+    width: 100%;
+    padding: 2px 23px 2px 20px;
+    outline: 0;
+}
+
+input#search-field:hover, .search:focus {
+    border: 2px solid #fea49f;
+    background-color: white;
+}
+
+.profile {
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+}
+
+.welcome-message {
+    display: flex;
+    gap: 20px;
+}
+
+.welcome-message p {
+    margin: 5px;
+}
+
+.welcome-message img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.header-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: center;
+    gap: 30px;
+}
+
+.header-buttons button {
+    cursor: pointer;
+    border: none;
+    background-color: #fea49f;
+    color: #101357;
+    width: 6rem;
+    height: 2.2rem;
+    border-radius: 18px;
+    font-size: calc(0.6rem + 0.4vw);
+    font-weight: 600; 
 }
