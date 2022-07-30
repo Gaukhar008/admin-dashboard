@@ -210,6 +210,7 @@ input#search-field:hover, .search:focus {
 .card p {
     display: flex;
     align-items: flex-start;
+    height: fit-content;
     font-size: calc(0.7rem + 0.4vw);
     color: #b6bac3;
     font-weight: 600;
@@ -232,11 +233,10 @@ input#search-field:hover, .search:focus {
     padding: 0 20px 20px 0px;
 }
 
-.block .card {
+.announcements .card {
     background-color: white;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    height: fit-content;
+    display: flex;
+    flex-direction: column;
     border-radius: 15px;
     box-shadow: var(--shadow);
     padding: 20px;
@@ -247,8 +247,15 @@ input#search-field:hover, .search:focus {
     font-size: calc(0.45rem + 0.4vw);
 }
 
+.block .card img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
 .announcement {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 5px;
 }
 
@@ -260,4 +267,23 @@ input#search-field:hover, .search:focus {
     display: flex;
     border-bottom: 1px solid #b6bac3;
     height: 10px;
+}
+
+.trending .card {
+    background-color: white;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-items: flex-start;
+    justify-content: start;
+    height: fit-content;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    padding: 20px;
+    row-gap: 15px;
+}
+
+.card .profile .account {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
