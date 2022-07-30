@@ -28,6 +28,7 @@ body {
 }
 
 .logo {
+    cursor: pointer;
     display: grid;
     grid-auto-flow: column;
     align-items: center;
@@ -45,6 +46,13 @@ body {
     list-style-type: none;
     font-size: calc(0.7rem + 0.4vw);
     font-weight: 600; 
+}
+
+.links p:hover {
+    cursor:pointer;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: white;
 }
 
 .links li {
@@ -73,11 +81,13 @@ body {
 
 .header-start img[alt*='icon'] {
     width: 25px;
+    cursor: pointer;
 }
 
 .header-start img[alt*='photo'] {
     width: 40px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .header-start {
@@ -85,6 +95,13 @@ body {
     grid-template-columns: 1.8fr 1.2fr;
     grid-auto-flow: column;
     gap: 30px;
+}
+
+.header-start .profile p:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #fea49f;
 }
 
 .header-end {
@@ -131,6 +148,7 @@ input#search-field:hover, .search:focus {
 
 .welcome-message {
     display: flex;
+    align-items: center;
     gap: 20px;
 }
 
@@ -142,6 +160,7 @@ input#search-field:hover, .search:focus {
     width: 60px;
     height: 60px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .header-buttons {
@@ -199,6 +218,7 @@ input#search-field:hover, .search:focus {
 
 .card-container .card img {
     width: 25px;
+    cursor: pointer;
 }
 
 .action-block {
@@ -223,6 +243,13 @@ input#search-field:hover, .search:focus {
     font-size: calc(1rem + 0.4vw) !important;
 }
 
+.card-container .card h3:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #B2C248;
+}
+
 /*ANNOUNCEMENTS AND TRENDING*/
 
 .announcements-trending {
@@ -245,6 +272,7 @@ input#search-field:hover, .search:focus {
 
 .block .card p {
     font-size: calc(0.45rem + 0.4vw);
+    cursor: pointer;
 }
 
 .block .card img {
