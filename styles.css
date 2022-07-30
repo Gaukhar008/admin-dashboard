@@ -209,7 +209,7 @@ input#search-field:hover, .search:focus {
     display: grid;
     grid-template-rows: 1fr 4fr 1.5fr;
     background-color: white;
-    height: 200px;
+    height: min(200px, fit-content);
     border-radius: 15px;
     box-shadow: var(--shadow);
     border-left: 10px solid #B2C248;
